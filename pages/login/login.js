@@ -1,4 +1,8 @@
 // pages/login/login.js
+
+import storage from '../../utils/storage.js';
+console.log(storage, 'storage')
+
 Page({
 
   /**
@@ -12,14 +16,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    storage.set('demo', {demo: 123})
+    storage.set('zhang', '小米')
+    
+    wx.login({
+      success: function(loginRes) {
+        console.log(loginRes, 'loginRes');
+        if (loginRes.code) {
+        // example: 081LXytJ1Xq1Y40sg3uJ1FWntJ1LXyth
+        }
+      }
+     });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log(storage.get('demo'), '000');
+    console.log(storage.get('zhang'), '111');
   },
 
   /**

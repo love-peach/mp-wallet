@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/login/login",
+    "pages/index/index",
     "pages/select-product/select-product",
     "pages/loan-thousand/real-name-certification/index",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/login/login"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",

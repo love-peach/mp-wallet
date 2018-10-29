@@ -33,6 +33,9 @@ App({
       }
     })
   },
+  onShow() {
+    console.log('show');
+  },
   globalData: {
     userInfo: null,
     platformOs: 'h5',
