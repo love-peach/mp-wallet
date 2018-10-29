@@ -1,0 +1,7 @@
+<!-- 顶部提示栏  -->
+<template name="custom-tip-bar">
+  <view class="custom-tip-bar">
+    <image class="custom-tip-bar-icon" src="/assets/images/icon-bulb.png"></image>
+    <text class="custom-tip-bar-text">{{text}}</text>
+  </view>
+</template>

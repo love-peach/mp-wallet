@@ -1,0 +1,23 @@
+<!--pages/select-product/select-product.wxml-->
+<view class="container">
+  <view class="banner">
+    <view class="banner-top">
+      <image class="banner-logo" src="/assets/images/logo.jpg"></image>
+      <text class="banner-text banner-text-name">随行付钱包</text>
+    </view>
+    <text class="banner-text banner-text-dis">请选择您心仪的产品</text>
+    <text class="banner-text banner-text-divider">--------------</text>
+  </view>
+  <view class="product-list">
+    <view
+      class="product-item"
+      style="background-image: url({{item.bgUrl}})"
+      wx:for="{{ productList }}"
+      wx:key="{{index}}"
+      data-type="{{item.type}}"
+      bindtap="doSomethionBeforeJump"
+    >
+      <view class="product-item-btn" style="color: {{item.textColor}}">{{item.statusText}}</view>
+    </view>
+  </view>
+</view>

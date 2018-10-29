@@ -1,0 +1,3 @@
+<view class="certification-warning-confirm-wrap">
+  <text class="certification-warning-confirm-text">提交后身份信息将无法更改，请确保本人真实</text>
+</view>

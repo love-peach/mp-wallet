@@ -1,0 +1,93 @@
+<!--pages/loan-thousand/real-name-certification/index.wxml-->
+<import src="/common/template.wxml" />
+<template is="custom-tip-bar" data="{{text: tipText}}"/>
+
+<view class="container app-page-content app-page-has-tel">
+  <text class="app-title-bar">{{ stepTitleText }}</text>
+  <view class="upload-id-card">
+    <view class="id-card-item id-card-front">
+      <image
+        class="id-card-img"
+        src="{{cardFront || cardFrontPlaceholder}}"
+        data-card-side="cardFront"
+        bindtap="handleSelectImage"
+      />
+      <text class="id-card-text" >点击拍摄照片面</text>
+    </view>
+    <view class="id-card-item id-card-behind">
+      <image
+        class="id-card-img"
+        src="{{cardBehind || cardBehindPlaceholder}}"
+        data-card-side="cardBehind"
+        bindtap="handleSelectImage"
+      />
+       <text class="id-card-text" >点击拍摄国徽面</text>
+    </view>
+  </view>
+  <wux-divider show-text="{{ false }}" />
+  <block wx:if="{{!cardFront && !cardBehind}}">
+    <include src="/common/certification-warning-text/index"/>
+  </block>
+
+  <block wx:else>
+    <text class="app-title-bar">核对身份证信息 </text>
+    <view class="form-list">
+      <wux-cell title="姓名" hoverClass="none">
+        <input
+          slot="footer"
+          class="form-item-text"
+          value="{{idName}}"
+          data-field="idName"
+          bindinput="handleChangeInputValue"
+        />
+      </wux-cell>
+      <wux-cell title="身份证" hoverClass="none">
+        <input
+          slot="footer"
+          class="form-item-text"
+          value="{{idNo}}"
+          type="idcard"
+          data-field="idNo"
+          bindinput="handleChangeInputValue"
+        />
+      </wux-cell>
+      <wux-cell title="签发机关" hoverClass="none">
+        <input
+          slot="footer"
+          class="form-item-text"
+          value="{{signOrg}}"
+          data-field="signOrg"
+          bindinput="handleChangeInputValue"
+        />
+      </wux-cell>
+      <wux-cell title="有效期限" hoverClass="none" is-link>
+        <input
+          slot="footer"
+          class="form-item-text"
+          value="{{validityPeriod}}"
+          disabled
+          bindtap="handleSelectDate"
+        />
+      </wux-cell>
+    </view>
+    <include src="/common/certification-warning-text-confirm/index"/>
+    <wux-button disabled="{{!isFieldValided}}" bindtap="handleSubmit" block type="calm">提交</wux-button>
+  </block>
+</view>
+<include src="/common/footer-tel/index"/>
+<wux-animation-group wux-class="demo" in="{{ isShowCalendar }}" class-names="wux-animate--slideInUp">
+  <view bindtap="handleCloseCalendar">关闭</view>
+  <import src="/common/calendar/index.wxml"/>
+  <view class="calendar-wrap">
+    <template is="calendar" data="{{...calendar}}" />
+  </view>
+  <calendar
+    weeks-type="cn"
+    cell-size="30" 
+    show-more-days="{{true}}"
+    calendar-style="demo4-calendar" 
+    header-style="demo4-header" 
+    board-style="demo4-board" 
+    days-color="{{demo4_days_style}}"
+  />
+</wux-animation-group>

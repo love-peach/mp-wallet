@@ -1,0 +1,67 @@
+/* pages/select-product/select-product.wxss */
+.banner {
+  width: 100%;
+  height: 400rpx;
+  padding: 0 36rpx;
+  background-color: #4CA6FF;
+  box-sizing: border-box;
+}
+.banner-top {
+  display: flex;
+  align-items: center;
+}
+.banner-logo {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 15rpx;
+  border-radius: 5rpx;
+}
+.banner-text {
+  color: #fff;
+}
+.banner-text-name {
+  font-size: 32rpx;
+  font-weight: 900;
+}
+.banner-text-dis {
+  margin-top: 5rpx;
+  display: block;
+  font-size: 54rpx;
+  font-weight: 900;
+  /* color: #e4ecfb; */
+  opacity: .9;
+}
+.banner-text-divider {
+  font-size: 24rpx;
+}
+
+.product-list {
+  margin-top: -180rpx;
+  text-align: center;
+}
+.product-item {
+  position: relative;
+  width: 715rpx;
+  height: 380rpx;
+  margin: auto;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-item-btn {
+    position: absolute;
+    bottom: 60rpx;
+    right: 50rpx;
+    width: 140rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #B8874C;
+    border-radius: 44rpx;
+    background: -webkit-linear-gradient(left, #eddcb2 , #feedc4); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #eddcb2 , #feedc4); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #eddcb2 , #feedc4); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #eddcb2 , #feedc4); /* 标准的语法 */
+    
+}

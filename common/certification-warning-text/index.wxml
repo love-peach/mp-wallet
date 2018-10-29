@@ -1,0 +1,5 @@
+<view class="certification-warning-wrap">
+  <text class="certification-warning-text">请将身份证放在取景框内，四角对准取景框边缘</text>
+  <text class="certification-warning-text">请在光线充足的环境下操作</text>
+  <text class="certification-warning-text">请保持手机稳定，不要摇晃</text>
+</view>

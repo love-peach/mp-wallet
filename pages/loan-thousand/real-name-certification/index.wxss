@@ -1,0 +1,58 @@
+/* pages/loan-thousand/real-name-certification/index.wxss */
+.upload-id-card {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  padding-bottom: 30rpx;
+}
+.id-card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.id-card-img {
+  width: 330rpx;
+  height: 200rpx;
+}
+.id-card-text {
+  margin-top: 30rpx;
+  color: #666666;
+  font-size: 24rpx;
+}
+
+.form-list {
+  margin: 0 -30rpx;
+}
+.form-item-text {
+  color: #666;
+  font-size: 30rpx;
+}
+
+.demo {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1500;
+  background: #cfd5da;
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+}
+
+@import '/common/calendar/index.wxss';
+
+.demo4-calendar {
+  background-color: #413a60;
+  padding-top: 10px;
+}
+
+.demo4-header {
+  font-size: large;
+  color: white;
+}
+
+.demo4-board {
+  color: white;
+}
