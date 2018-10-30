@@ -1,1 +1,8 @@
 /* pages/login/login.wxss */
+.user-name {
+  text-align: center;
+}
+.user-avatar {
+  width: 240rpx;
+  margin: 0 auto;
+}

@@ -21,10 +21,10 @@ const request = (url, params, method, options) => {
       method,
       data: params,
       header: headerConfig,
-      success(result) {
-        if (result.statusCode === 200) {
-          resolve(result.data)
-        } else if ( result.statusCode === 401) {
+      success(res) {
+        if (res.statusCode === 200) {
+          resolve(res.data)
+        } else if ( res.statusCode === 401) {
           wx.showToast({
             title: '请求异常，请重新登录',
             icon: 'none',
@@ -37,7 +37,13 @@ const request = (url, params, method, options) => {
             });
           }, 2000)
         } else {
-          reject(result.data)
+          wx.showToast({
+            title: `${res.statusCode} 服务器异常`,
+            icon: 'none',
+            mask: false,
+            duration: 2000,
+          });
+          reject(res.data)
         }
       },
       fail(error) {

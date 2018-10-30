@@ -5,3 +5,8 @@ import apiUrl from './api-url.js'
 exports.uploadIdCardFront = function (params) {
   return request.post(apiUrl.uploadCertificationPhoto, params);
 };
+
+// 微信授权登录
+exports.wechatAuthLogin = function (params) {
+  return request.post(apiUrl.wechatAuthLogin, params);
+};

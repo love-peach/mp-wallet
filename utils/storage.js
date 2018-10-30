@@ -23,7 +23,7 @@ const storage = {
         wx.getStorage({
           key: key.trim(),
           success(res) {
-            resolve(res);
+            resolve(res.data);
           },
           fail(err) {
             reject(err);
