@@ -3,8 +3,6 @@ import {
   watch,
   computed
 } from "../../../utils/vuefy.js";
-import api from '../../../api/api.js';
-import initCalendar from '../../../common/calendar/index';
 
 const app = getApp();
 
