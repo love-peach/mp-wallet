@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "身份信息",
+  "usingComponents": {
+    "wux-divider": "/components/divider/index",
+    "wux-cell": "/components/cell/index",
+    "wux-button": "/components/button/index",
+    "wux-animation-group": "/components/animation-group/index",
+    "calendar": "plugin://calendar/calendar"
+  }
+}

@@ -35,23 +35,6 @@ Page({
           wxCode: res.code,
           wxStep: 'wxauth02',
         }
-        // var appId = 'wx2988a731ca3166af'
-        // var secret = 'be0e944aecb42e7d82eb24c5124c4d45'
-        // const that = this;
-        // wx.request({
-        //   url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + res.code + '&grant_type=authorization_code',
-        //   data: {},
-        //   header: {
-        //     'content-type': 'json'
-        //   },
-        //   success: function (res) {
-        //     console.log(res.data, 'res000');
-        //     that.setData({
-        //       openid: res.data.openid
-        //     })
-        //   }
-        // })
-        // return;
         api.wechatAuthLogin(params).then(res => {
           console.log(res, 'res');
         }).catch(err => {

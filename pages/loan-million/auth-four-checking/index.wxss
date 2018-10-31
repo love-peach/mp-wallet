@@ -1,0 +1,21 @@
+.additional-btn {
+  margin-top: 25rpx;
+}
+.protocol-wrap {
+  line-height: 1;
+  margin-top: 15rpx;
+}
+.protocol-icon {
+  height: 32rpx;
+  width: 32rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.protocol-text {
+  color: #686868;
+  font-size: 24rpx;
+  vertical-align: middle;
+}
+.protocol-terms {
+  color: #4ca6ff;
+}

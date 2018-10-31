@@ -1,0 +1,7 @@
+<template  name="message-box">
+  <view class="message-box-wrap">
+    <image class="message-box-icon" src="{{ icon }}" />
+    <text class="message-box-text {{type ? 'message-box-text-' + type : ''}}">{{ text }}</text>
+  </view>
+</template>
+

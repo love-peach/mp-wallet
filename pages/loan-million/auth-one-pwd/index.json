@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "借款 / 还款密码",
+  "usingComponents": {
+    "wux-cell": "/components/cell/index",
+    "wux-button": "/components/button/index"
+  }
+}

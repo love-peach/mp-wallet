@@ -1,4 +1,12 @@
 /* pages/loan-thousand/real-name-certification/index.wxss */
+.message-tip {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #f8732c;
+  font-size: 28rpx;
+  text-align: center;
+  border: 1px solid #f8732c;
+}
 .upload-id-card {
   display: flex;
   flex-direction: row;

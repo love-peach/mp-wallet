@@ -1,0 +1,12 @@
+/* pages/loan-thousand/real-name-certification/index.wxss */
+.form-item-text {
+  text-align: left;
+  color: #333;
+}
+.form-item-text-placeholder {
+  color: #C9C9C9;
+  font-size: 30rpx;
+}
+.demo {
+  margin-top: 30rpx;
+}

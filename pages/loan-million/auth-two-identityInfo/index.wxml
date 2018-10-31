@@ -1,10 +1,10 @@
+<!--pages/loan-thousand/real-name-certification/index.wxml-->
 <import src="/template/index.wxml" />
 
-<template is="custom-tip-bar" data="{{text: tipText}}"/>
-
+<template is="auth-schedule-million" data="{{width: '38%'}}"/>
 <view class="container app-page-content app-page-has-tel">
+  <view class="message-tip">根据国家法律要求，使用互联网金融服务必须实名登记</view>
   <template is="title-bar" data="{{ text: stepTitleText}}" />
-
   <view class="upload-id-card">
     <view class="id-card-item id-card-front">
       <image
@@ -25,13 +25,29 @@
        <text class="id-card-text" >点击拍摄国徽面</text>
     </view>
   </view>
-  <wux-divider show-text="{{ false }}" />
+
+  <view style="margin-bottom: 30rpx">
+    <wux-divider show-text="{{ false }}" />
+  </view>
+
+  <view class="upload-id-card" style="justify-content:center">
+    <view class="id-card-item id-card-front">
+      <image
+        class="id-card-img"
+        src="{{cardHand || cardHandPlaceholder}}"
+        data-card-side="cardHand"
+        bindtap="handleSelectImage"
+      />
+      <text class="id-card-text" >点击拍摄本人照</text>
+    </view>
+  </view>
+
   <block wx:if="{{!cardFront && !cardBehind}}">
     <template is="shotting-idcard-tips" />
   </block>
 
   <block wx:else>
-    <template is="title-bar" data="{{ text: '核对身份证信息' }}" />
+    <template is="title-bar" data="{{ text: '核对身份证信息'}}" />
     <view class="form-list">
       <wux-cell title="姓名" hoverClass="none">
         <input
@@ -75,7 +91,6 @@
     <wux-button disabled="{{!isFieldValided}}" bindtap="handleSubmit" block type="calm">提交</wux-button>
   </block>
 </view>
-
 <template is="customer-service" />
 
 <wux-animation-group wux-class="demo" in="{{ isShowCalendar }}" class-names="wux-animate--slideInUp">

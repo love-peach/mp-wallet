@@ -1,9 +1,21 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/select-product/select-product",
-    "pages/index/index",
+    "pages/loan-million/auth-four-checking/index",
+
+    "pages/loan-million/auth-four-failed/index",
+
+    "pages/loan-million/auth-four-success/index",
+
+
     "pages/loan-thousand/real-name-certification/index",
+
+    "pages/loan-million/auth-three-additional/index",
+    "pages/loan-million/auth-two-identityInfo/index",
+    "pages/loan-million/auth-one-pwd/index",
+    "pages/select-product/select-product",
+    
+    "pages/login/login",
+    "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {

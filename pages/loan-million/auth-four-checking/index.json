@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "信用审核",
+  "usingComponents": {
+    "wux-button": "/components/button/index",
+    "wux-animation-group": "/components/animation-group/index"
+  }
+}

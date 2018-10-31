@@ -30,22 +30,26 @@
 .wux-cell--hover {
   background-color: #ECECEC;
 }
+.wux-cell--active {
+  opacity: 0.6;
+}
 .wux-cell__thumb {
   display: block;
-  width: 40rpx;
-  height: 40rpx;
+  width: 60rpx;
+  height: 60rpx;
   margin-right: 10rpx;
 }
 .wux-cell__bd {
   /* -webkit-box-flex: 1; */
   /* -webkit-flex: 1; */
           /* flex: 1; */
-  min-width: 170rpx;
+  
 }
 .wux-cell__text {
   text-align: left;
   color: #333;
   font-size: 34rpx;
+  min-width: 170rpx;
 }
 .wux-cell__desc {
   text-align: left;

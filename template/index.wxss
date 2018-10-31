@@ -1,0 +1,138 @@
+
+
+/* 底部客服电话 */
+.footer-customer-service {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+.footer-customer-service-border {
+  box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.2);
+}
+.customer-service-text {
+  color: #686868;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+/* 顶部提示栏样式 */
+.custom-tip-bar {
+  padding: 22rpx 0;
+  text-align: center;
+  background-color: #F5F8FC;
+}
+.custom-tip-bar-icon {
+  height: 44rpx;
+  width: 38rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.custom-tip-bar-text {
+  color: #FF9600;
+  font-size: 26rpx; 
+}
+
+/* 认证进度条 万元版 */
+.auth-schedule-million {
+  position: relative;
+  margin-top: 10rpx;
+  margin-bottom: 40rpx;
+  margin: 10rpx 50rpx 50rpx;
+}
+.auth-schedule-million .auth-schedule-result {
+  text-align: right;
+  font-size: 36rpx;
+  color: #FF9600;
+  font-weight: bolder;
+}
+.auth-schedule-result:after {
+  content: '元';
+  font-size: 24rpx;
+  font-weight: normal;
+}
+
+.schedule-bar-outer {
+  position: absolute;
+  top: 72rpx;
+  left: 28rpx;
+  right: 5rpx;
+  height: 20rpx;
+  border-radius: 20rpx;
+  background-color: RGBA(76, 166, 255, .4);
+}
+.schedule-bar-inner {
+  height: 100%;
+  border-radius: 20rpx;
+  background-color: RGBA(76, 166, 255, 1);
+}
+
+.schedule-list-million {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.schedule-item-million {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.schedule-item-million-img {
+  width: 36rpx;
+  height: 36rpx;
+  padding: 8rpx;
+  background-color: #fff;
+  border-radius: 40rpx;
+  border: 3rpx solid #4CA6FF;
+}
+.schedule-item-million-text {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+
+
+
+/* 认证状态 审核中 审核成功 审核失败 */
+.auth-status-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 360rpx;
+}
+.auth-status-icon {
+  width: 128rpx;
+  height: 128rpx;
+}
+.auth-status-text {
+  margin-top: 15rpx;
+  font-size: 36rpx;
+}
+.auth-status-text-warning {
+  color: #ff9600;
+}
+.auth-status-text-negative{
+  color: #c5c5c5
+}
+.auth-status-text-success {
+  color: #40db89;
+}
+
+/* 长按识别二维码 */
+.follow-qrcode-wrap {
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.follow-qrcode-img {
+  height: 460rpx;
+  width: 460rpx;
+}
+.follow-qrcode-text {
+  margin-top: 10rpx;
+  color: #999;
+  font-size: 24rpx;
+}

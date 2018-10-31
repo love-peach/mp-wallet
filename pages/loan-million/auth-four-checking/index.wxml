@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<import src="/template/index.wxml" />
+
+<template is="auth-schedule-million" data="{{width: '75%'}}"/>
+<view class="container app-page-content app-page-has-tel">
+  <template is="auth-status" data="{{icon: '/assets/images/icon-pendding.png', text: '您提交的信息正在审核中…', type: 'warning'}}" />
+  <view class="app-tip-wrap">
+    <text class="app-tip-text">1.预计审核时间【30分钟】；</text>
+    <text class="app-tip-text">2.审核结果会以短信形式告知您，请密切留意；</text>
+    <text class="app-tip-text">3.您也可以随时登录服务号、App查询审核进度。</text>
+  </view>
+  <wux-button class="additional-btn" bindtap="handleDounload" block type="calm">下载App查看进度</wux-button>
+  <template is="follow-qrcode" />
+</view>
+<template is="customer-service" />

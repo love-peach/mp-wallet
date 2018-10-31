@@ -1,0 +1,83 @@
+/* 容器样式 */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* 容器样式 间距 */
+.app-page-content {
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+}
+
+/* 容器样式 负间距 */
+.app-page-offset-content {
+  margin-left: -30rpx;
+  margin-right: -30rpx;
+}
+
+/* 容器样式 给底部客服电话预留空间 */
+.app-page-has-tel {
+  margin-bottom: 120rpx;
+}
+
+/* 标题样式 */
+.app-title-bar {
+  position: relative;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 600;
+  line-height: 40rpx;
+}
+.app-title-bar:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 26rpx;
+  width: 4rpx;
+  height: 28rpx;
+  background: #4ca6ff;
+}
+
+/* 提示样式 */
+.app-tip-wrap {
+  margin-top: 20rpx;
+}
+
+.app-tip-text {
+  display: block;
+  color: #666;
+  font-size: 24rpx;
+  margin-bottom: 11rpx;
+}
+.app-tip-text-warning {
+  color: #f8732c;
+}
+.app-tip-text-danger {
+  color: #FF434B;
+}
+
+.app-tip-prefix {
+  position: relative;
+  padding-left: 20rpx;
+}
+.app-tip-prefix:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '*';
+  font-size: 28rpx;
+}
+.app-tip-prefix-warning:before {
+  color: #f8732c;
+}
+.app-tip-prefix-danger:before {
+  color: #FF434B;
+}

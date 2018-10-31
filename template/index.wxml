@@ -1,0 +1,87 @@
+
+<!-- 标题样式 -->
+<template name="title-bar">
+  <text class="app-title-bar">{{ text }}</text>
+</template>
+
+<!-- 底部客服电话 -->
+<template name="customer-service">
+  <view class="footer-customer-service {{isReachBottom ? '' : 'footer-customer-service-border'}}" bindtap="handleCallCustomerService">
+    <text class="customer-service-text">客服电话：400—088—7626 </text>
+  </view>
+</template>
+
+<!-- 顶部提示栏  -->
+<template name="custom-tip-bar">
+  <view class="custom-tip-bar">
+    <image class="custom-tip-bar-icon" src="/assets/images/icon-bulb.png"></image>
+    <text class="custom-tip-bar-text">{{text}}</text>
+  </view>
+</template>
+
+<!-- 身份证照片上传 拍摄提示 -->
+<!-- 这块模板的样式在 /style/common.wxss 文件中，因为样式可以共用 -->
+<template name="shotting-idcard-tips">
+  <view class="app-tip-wrap">
+    <text class="app-tip-text app-tip-prefix app-tip-prefix-warning">请将身份证放在取景框内，四角对准取景框边缘</text>
+    <text class="app-tip-text app-tip-prefix app-tip-prefix-warning">请在光线充足的环境下操作</text>
+    <text class="app-tip-text app-tip-prefix app-tip-prefix-warning">请保持手机稳定，不要摇晃</text>
+  </view>
+</template>
+
+<!-- 提交身份信息 确认提示 -->
+<!-- 这块模板的样式在 /style/common.wxss 文件中，因为样式可以共用 -->
+<template name="certification-confirm-text">
+  <view class="app-tip-wrap">
+    <text class="app-tip-text app-tip-text-warning app-tip-prefix app-tip-prefix-warning">提交后身份信息将无法更改，请确保本人真实</text>
+  </view>
+</template>
+
+<!-- 认证进度条 万元版 -->
+<template name="auth-schedule-million">
+  <view class="auth-schedule-million">
+    <view class="auth-schedule-result">50</view>
+    <view class="schedule-bar-outer">
+      <view class="schedule-bar-inner" style="width: {{ width }}"></view>
+    </view>
+    <view class="schedule-list-million">
+      <view class="schedule-item-million">
+        <image class="schedule-item-million-img" mode="aspectFit" src="/assets/images/auth-step-million/icon-step-million-1.png"></image>
+        <text class="schedule-item-million-text">申请授信</text>
+      </view>
+      <view class="schedule-item-million">
+        <image class="schedule-item-million-img" mode="aspectFit" src="/assets/images/auth-step-million/icon-step-million-2.png"></image>
+        <text class="schedule-item-million-text">身份认证</text>
+      </view>
+      <view class="schedule-item-million">
+        <image class="schedule-item-million-img" mode="aspectFit" src="/assets/images/auth-step-million/icon-step-million-3.png"></image>
+        <text class="schedule-item-million-text">信息评估</text>
+      </view>
+      <view class="schedule-item-million">
+        <image class="schedule-item-million-img" mode="aspectFit" src="/assets/images/auth-step-million/icon-step-million-4.png"></image>
+        <text class="schedule-item-million-text">提交授信</text>
+      </view>
+      <view class="schedule-item-million">
+        <image class="schedule-item-million-img" mode="aspectFit" src="/assets/images/auth-step-million/icon-step-million-5.png"></image>
+        <text class="schedule-item-million-text">提现</text>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!-- 认证状态 审核中 审核成功 审核失败 -->
+<template  name="auth-status">
+  <view class="auth-status-wrap">
+    <image class="auth-status-icon" src="{{ icon }}" />
+    <text class="auth-status-text {{type ? 'auth-status-text-' + type : ''}}">{{ text }}</text>
+  </view>
+</template>
+
+<!-- 长按识别二维码 -->
+<template name="follow-qrcode">
+  <view class="follow-qrcode-wrap">
+    <image class="follow-qrcode-img" src="/assets/images/qrcode.png" />
+    <text class="follow-qrcode-text">长按识别二维码</text>
+    <text class="follow-qrcode-text">或微信搜索：随行付钱包</text>
+  </view>
+</template>
