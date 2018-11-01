@@ -4,12 +4,11 @@ import {
   watch,
   computed
 } from "../../../utils/vuefy.js";
-import api from '../../../api/api.js';
 import initCalendar from '../../../common/calendar/index';
 
 const app = getApp();
 
-Page({
+app.wxPage({
 
   /**
    * 页面的初始数据
@@ -185,13 +184,6 @@ Page({
   },
 
   /**
-   * 拨打客服电话
-   */
-  handleCallCustomerService() {
-    app.globalData.makePhoneCallCustomerService();
-  },
-
-  /**
    * 用户选择图片
    */
   handleSelectImage: function (event) {
@@ -244,7 +236,7 @@ Page({
       img: base64Data,
       ocrType: '2',
     };
-    api.uploadIdCardFront(params)
+    this.api.uploadIdCardFront(params)
       .then(res => {
         wx.hideToast();
         if (res.code === '0000') {
@@ -285,7 +277,7 @@ Page({
       img: base64Data,
       ocrType: '3',
     };
-    api.uploadIdCardFront(params)
+    this.api.uploadIdCardFront(params)
       .then(res => {
         wx.hideToast();
         if (res.code === '0000') {

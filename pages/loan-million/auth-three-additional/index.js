@@ -4,7 +4,7 @@ import api from '../../../api/api.js';
 
 const app = getApp();
 
-Page({
+app.wxPage({
 
   /**
    * 页面的初始数据
@@ -85,13 +85,6 @@ Page({
   },
 
   /**
-   * 拨打客服电话
-   */
-  handleCallCustomerService() {
-    app.globalData.makePhoneCallCustomerService();
-  },
-
-  /**
    * 同意协议
    */
   handleToggleAgreeProtocol() {
@@ -122,6 +115,8 @@ Page({
       });
       return;
     }
-    console.log('提交');
+    wx.navigateTo({
+      url: '/pages/loan-million/auth-four-checking/index'
+    });
   }
 })

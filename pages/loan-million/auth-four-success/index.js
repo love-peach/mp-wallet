@@ -1,6 +1,6 @@
 const app = getApp();
 
-Page({
+app.wxPage({
 
   /**
    * 页面的初始数据
@@ -63,13 +63,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  /**
-   * 拨打客服电话
-   */
-  handleCallCustomerService() {
-    app.globalData.makePhoneCallCustomerService();
   },
 
   /**

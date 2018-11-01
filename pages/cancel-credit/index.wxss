@@ -1,0 +1,41 @@
+/* pages/cancel-credit/index.wxss */
+.cancel-title {
+  padding-left: 28rpx;
+  color: #222;
+  font-size: 34rrpx;
+  font-weight: bolder;
+}
+.reason_list {
+  margin-top: 36rpx;
+  position: relative;
+}
+.reason_item {
+  padding: 0 30rpx;
+}
+.reason_item_content {
+  display: flex;
+  padding: 40rpx 0 38rpx;
+  justify-content: space-between;
+}
+.reason_item + .reason_item .reason_item_content{
+  border-top: 1rpx solid #E3E4E6;
+}
+.item_text {
+  font-size: 30rpx;
+  color: #333;
+}
+.item_icon {
+  height: 36rpx;
+  width: 36rpx;
+}
+.reason_other_wrap {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 18rpx auto 0;
+  border: 2rpx solid #E3E4E6;
+  padding: 10rpx 20rpx;
+  border-radius: 8rpx;
+}
+.reason_other_textarea {
+  font-size: 32rpx;
+}

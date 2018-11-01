@@ -1,11 +1,12 @@
 // pages/login/login.js
 // https://www.jb51.net/article/137920.htm
+const app = getApp();
 import store from '../../utils/store.js';
 import api from '../../api/api.js';
 import * as wxApi from '../../utils/wxApi.js';
 import { getUrlParam } from '../../utils/util.js';;
 
-const { regeneratorRuntime } = global;
+const { regeneratorRuntime } = app;
 
 Page({
 
@@ -22,7 +23,10 @@ Page({
   async onLoad(options) {
     // wx.authorize({scope: "scope.userLocation"});
     const location = await wxApi.getLocation();
+    console.log(location, 'location');
+
     const { address } = await wxApi.getLocationFormat();
+    console.log(address, 'address');
 
     wxApi.login().then(res => {
       console.log(res, 'res')
@@ -35,6 +39,7 @@ Page({
           wxCode: res.code,
           wxStep: 'wxauth02',
         }
+        console.log(res.code, 'res.code');
         api.wechatAuthLogin(params).then(res => {
           console.log(res, 'res');
         }).catch(err => {

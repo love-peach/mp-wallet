@@ -1,5 +1,7 @@
 // 链接：https://www.jianshu.com/p/ad1e5b581e18
-const app = getApp();
+
+// const app = getApp();
+
 /**
  * 封装请求方法
  * @param {url} str 请求地址
@@ -8,6 +10,8 @@ const app = getApp();
  * @param {header} obj 请求 header 配置项
  */
 const request = (url, params, method, options) => {
+  // TODO: app 只能在这里引入，如果在前面引入，会造成还未获取到 app.
+  const app = getApp();
   return new Promise((resolve, reject) => {
     const headerDefault = {
       'Content-Type': 'application/json; charset=UTF-8',

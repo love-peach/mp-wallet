@@ -1,16 +1,4 @@
-const getLocation = (params) => {
-  return new Promise((resolve, reject) => {
-    wx.getLocation({
-      ...params,
-      success(res) {
-        resolve(res);
-      },
-      fail(err) {
-        reject(err);
-      },
-    });
-  });
-};
+
 
 // import QQMapWX from '../../lib/qqmap-wx-jssdk.min.js';
 const QQMapWX = require('../lib/qqmap-wx-jssdk.min.js');
@@ -35,10 +23,10 @@ const getLocationFormat = (params) => {
   return new Promise((resolve, reject) => {
     QQMapSdk.reverseGeocoder({
       location: locationParams,
-      success: function(res) {
+      success: function (res) {
         resolve(res.result);
       },
-      fail: function(err) {
+      fail: function (err) {
         wx.showToast({
           title: err.message,
           icon: 'none',
@@ -51,9 +39,10 @@ const getLocationFormat = (params) => {
   });
 };
 
-const login = (params) => {
+// 简单 promise 生成器
+function createSimplePromiseFun(wxMethods, params) {
   return new Promise((resolve, reject) => {
-    wx.login({
+    wx[wxMethods]({
       ...params,
       success(res) {
         resolve(res);
@@ -63,10 +52,22 @@ const login = (params) => {
       },
     });
   });
-};
+}
+const getLocation =  params => createSimplePromiseFun('getLocation', params);
+
+const login = params => createSimplePromiseFun('login', params);
+
+const makePhoneCall = params => createSimplePromiseFun('makePhoneCall', {
+  phoneNumber: '4000887626',
+  ...params
+}).catch(err => {
+  console.log(err,'err');
+});
+
 
 module.exports = {
   getLocation,
   getLocationFormat,
   login,
+  makePhoneCall,
 };

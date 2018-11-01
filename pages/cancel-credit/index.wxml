@@ -1,0 +1,42 @@
+<!--pages/cancel-credit/index.wxml-->
+
+<import src="/template/index.wxml" />
+
+<template is="auth-status" data="{{icon: '/assets/images/icon-success.png', text: '已经取消借贷申请', type: 'success'}}" />
+<text class="cancel-title">选择取消原因帮助我们改进</text>
+<view class="reason_list">
+  <view
+    wx:for="{{cancelReason}}"
+    wx:key="index"
+    class="reason_item"
+    data-item-data="{{item}}"
+    bindtap="handleSelectReason"
+  >
+    <view class="reason_item_content">
+      <text class="item_text">{{ item.msgContent }}</text>
+      <image
+        class="item_icon"
+        src="{{selectReason && selectReason.msgId === item.msgId ? IconSelectActive : IconSelect}}"
+        alt="选项"
+      />
+    </view>
+  </view>
+</view>
+
+<view class="app-page-content">
+  <view wx:if="{{ isSelectOtherReason }}" class="reason_other_wrap">
+    <wux-textarea
+      focus
+      rows="2"
+      hasCount
+      controlled 
+      maxlength="{{28}}"
+      cursorSpacing="80"
+      placeholder="请填写原因"
+      value="{{ otherReason }}"
+      bind:change="handleChangeOtherReason"
+      class="reason_other_textarea"
+    />
+  </view>
+  <wux-button  disabled="{{ !selectReason }}" bindtap="handleSubmit" block type="calm">提交并退出</wux-button>
+</view>

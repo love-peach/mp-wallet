@@ -1,5 +1,6 @@
-// pages/select-product/select-product.js
-Page({
+const app = getApp();
+
+app.wxPage({
 
   /**
    * 页面的初始数据
@@ -84,10 +85,10 @@ Page({
     const productType = event.currentTarget.dataset.type;
     if (productType === 'thousand') {
       this.recordThousandProduct();
-      this.goWhere();
+      this.goWhereThousand();
     } else if (productType === 'million') {
       this.recordMillionProduct();
-      this.goWhere();
+      this.goWhereMillion();
     }
   },
 
@@ -108,9 +109,18 @@ Page({
   /**
    * 根据授权状态跳不同页面
    */
-  goWhere: function() {
+  goWhereThousand: function() {
     wx.navigateTo({
       url: '/pages/loan-thousand/real-name-certification/index'
+    });
+  },
+
+  /**
+   * 根据授权状态跳不同页面
+   */
+  goWhereMillion: function() {
+    wx.navigateTo({
+      url: '/pages/loan-million/auth-one-pwd/index'
     });
   }
 

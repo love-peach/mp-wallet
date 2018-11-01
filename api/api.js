@@ -10,3 +10,8 @@ exports.uploadIdCardFront = function (params) {
 exports.wechatAuthLogin = function (params) {
   return request.post(apiUrl.wechatAuthLogin, params);
 };
+
+// 获取取消授信原因列表
+exports.getCancelCreditReasonList = function (params) {
+  return request.get(apiUrl.cancelCreditReasonList, params);
+};

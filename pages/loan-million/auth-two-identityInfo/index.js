@@ -9,7 +9,7 @@ import initCalendar from '../../../common/calendar/index';
 
 const app = getApp();
 
-Page({
+app.wxPage({
 
   /**
    * 页面的初始数据
@@ -185,13 +185,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  /**
-   * 拨打客服电话
-   */
-  handleCallCustomerService() {
-    app.globalData.makePhoneCallCustomerService();
   },
 
   /**
@@ -441,6 +434,8 @@ Page({
       this.handleShowFormError();
       return;
     }
-    console.log(this.data, 'ss')
+    wx.navigateTo({
+      url: '/pages/loan-million/auth-three-additonal/index'
+    });
   },
 })

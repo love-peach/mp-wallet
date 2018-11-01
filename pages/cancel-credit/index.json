@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wux-button": "/components/button/index",
+    "wux-textarea": "/components/textarea/index",
+    "wux-animation-group": "/components/animation-group/index"
+  }
+}

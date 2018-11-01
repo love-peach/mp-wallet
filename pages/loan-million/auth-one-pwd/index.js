@@ -6,7 +6,7 @@ import {
 
 const app = getApp();
 
-Page({
+app.wxPage({
 
   /**
    * 页面的初始数据
@@ -81,13 +81,6 @@ Page({
   },
 
   /**
-   * 拨打客服电话
-   */
-  handleCallCustomerService() {
-    app.globalData.makePhoneCallCustomerService();
-  },
-
-  /**
    * 输入框输入事件
    */
   handleChangeInputValue(event) {
@@ -145,6 +138,8 @@ Page({
       this.handleShowFormError();
       return;
     }
-    console.log(this.data, 'ss')
+    wx.navigateTo({
+      url: '/pages/loan-million/auth-two-identityInfo/index'
+    });
   },
 })

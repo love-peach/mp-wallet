@@ -1,22 +1,23 @@
 //app.js
-global.regeneratorRuntime = require('./lib/runtime');
+
+// 扩展 page
+import wxPage from './utils/wxPage';
+
+// 异步变同步
+const regeneratorRuntime = require('./lib/runtime');
+
 App({
   onLaunch: function () {
-    
-    
-  },
   
+  },
+  wxPage,
+  regeneratorRuntime,
   globalData: {
     userInfo: null,
     platformOs: 'h5',
     sysType: 'wechat',
-    token: '7df966bc8fe81011e20c1ed0a935f555',
+    token: '39af25a9702385e6c3546fcfd2d2dd4c',
     baseUrl: 'https://stageloanh5-test.vbillbank.com/api',
-    version: '1.0.0',
-    makePhoneCallCustomerService() {
-      wx.makePhoneCall({
-        phoneNumber: '4000887626',
-      });
-    }
+    version: '1.0.0'
   }
 })
