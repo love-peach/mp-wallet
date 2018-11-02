@@ -80,7 +80,21 @@
 <!-- 长按识别二维码 -->
 <template name="follow-qrcode">
   <view class="follow-qrcode-wrap">
-    <image class="follow-qrcode-img" src="/assets/images/qrcode.png" />
+    
+    <!-- <image class="follow-qrcode-img" src="/assets/images/qrcode.png" /> -->
+    
+    <image
+      class="follow-qrcode-img"
+      src="https://www.vbilljr.com/front/images/wallet/wallet-code.png"
+      data-src="https://www.vbilljr.com/front/images/wallet/wallet-code.png"
+      bindtap="handlePreviewQrcode"
+    />
+    <image
+      class="follow-qrcode-img"
+      src="https://mp.weixin.qq.com/wxopen/qrcode?action=show&type=2&fakeid=3852072587&token=1984597289"
+      data-src="https://mp.weixin.qq.com/wxopen/qrcode?action=show&type=2&fakeid=3852072587&token=1984597289"
+      bindtap="handlePreviewQrcode"
+    />
     <text class="follow-qrcode-text">长按识别二维码</text>
     <text class="follow-qrcode-text">或微信搜索：随行付钱包</text>
   </view>

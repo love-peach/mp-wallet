@@ -1,0 +1,3 @@
+.app-web-view {
+  padding: 10px;
+}

@@ -1,0 +1,5 @@
+
+<web-view wx:if="{{ webUrl }}" class="app-web-view" src="{{webUrl}}"></web-view>
+<view wx:else>
+  fefe {{ webUrl }}
+</view>

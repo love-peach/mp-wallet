@@ -8,6 +8,9 @@ const wxPage = function(config) {
   // 添加 http 请求
   config.api = api;
 
+  // 添加 封装的 wxApi
+  config.wxApi = wxApi;
+
   // 添加 打电话函数
   config.handleCallCustomerService = wxApi.makePhoneCall;
 

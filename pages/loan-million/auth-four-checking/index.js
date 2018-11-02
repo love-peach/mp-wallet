@@ -7,6 +7,7 @@ app.wxPage({
    */
   data: {
     isReachBottom: false,
+    filePath: '',
   },
 
   /**
@@ -79,6 +80,57 @@ app.wxPage({
    * 下载app
    */
   handleDounload() {
+    const that = this;
     console.log('下载')
+    this.wxApi.downloadFile({
+      url: 'https://stageloanh5-test.vbillbank.com/img/small1000-84a2b62f.png'
+    }).then(res => {
+      if (res.statusCode === 200) {
+        console.log(res.tempFilePath);
+        
+        // wx.getFileSystemManager().readFile({
+        //   filePath: res.tempFilePath,
+        //   success(result) {
+        //     console.log(result, 'result');
+        //   }
+        // })
+        wx.saveFile({
+          tempFilePath: res.tempFilePath,
+          success(result) {
+            console.log(result, 'result');
+            that.setData({
+              filePath: result.savedFilePath,
+            });
+            wx.openDocument({
+              filePath: result.savedFilePath,
+              success(result2) {
+                console.log(result2, 'result2')
+              },
+              fail(err) {
+                console.log(err, 'err')
+              }
+            })
+          }
+        })
+        // wx.getSavedFileList({
+        //   success(result) {
+        //     console.log(result, 'result')
+        //   }
+        // })
+      }
+    }).catch(err => {
+      console.log(err);
+    })
+  },
+
+  // 预览二维码
+  handlePreviewQrcode(event) {
+    console.log(event);
+
+    const { src } = event.target.dataset;
+    wx.previewImage({
+      current: src, // 当前显示图片的http链接   
+      urls: [src],
+    });
   }
 })

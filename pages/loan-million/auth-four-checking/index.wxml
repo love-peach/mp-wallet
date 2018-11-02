@@ -10,6 +10,7 @@
     <text class="app-tip-text">3.您也可以随时登录服务号、App查询审核进度。</text>
   </view>
   <wux-button class="additional-btn" bindtap="handleDounload" block type="calm">下载App查看进度</wux-button>
+  <image wx:if="{{ filePath }}" src="{{filePath}}" />
   <template is="follow-qrcode" />
 </view>
 <template is="customer-service" />

@@ -57,6 +57,8 @@ const getLocation =  params => createSimplePromiseFun('getLocation', params);
 
 const login = params => createSimplePromiseFun('login', params);
 
+const downloadFile = params => createSimplePromiseFun('downloadFile', params);
+
 const makePhoneCall = params => createSimplePromiseFun('makePhoneCall', {
   phoneNumber: '4000887626',
   ...params
@@ -70,4 +72,5 @@ module.exports = {
   getLocationFormat,
   login,
   makePhoneCall,
+  downloadFile,
 };

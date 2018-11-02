@@ -12,6 +12,9 @@
         thumb="{{item.imgSrc}}"
         title="{{item.text}}"
         extra="去授权"
+        data-auth-type="{{item.authType}}"
+        data-auth-type-code="{{item.authTypeCode}}"
+        bindtap="handleAuthTo"
       />
     </block>
   </view>

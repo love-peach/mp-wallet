@@ -15,3 +15,8 @@ exports.wechatAuthLogin = function (params) {
 exports.getCancelCreditReasonList = function (params) {
   return request.get(apiUrl.cancelCreditReasonList, params);
 };
+
+// 征信接口 第三方授信接口 运营商授信 淘宝授信 京东授信 信用卡授信
+exports.goThirdPartyAuth = function (params) {
+  return request.get(apiUrl.thirdPartyAuth, params);
+};

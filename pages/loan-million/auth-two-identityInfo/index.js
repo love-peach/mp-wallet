@@ -435,7 +435,7 @@ app.wxPage({
       return;
     }
     wx.navigateTo({
-      url: '/pages/loan-million/auth-three-additonal/index'
+      url: '/pages/loan-million/auth-three-additional/index'
     });
   },
 })

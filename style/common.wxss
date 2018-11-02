@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+  padding-bottom: 80rpx;
 }
 
 /* 容器样式 间距 */
@@ -21,7 +22,7 @@
 
 /* 容器样式 给底部客服电话预留空间 */
 .app-page-has-tel {
-  margin-bottom: 120rpx;
+  margin-bottom: 40rpx;
 }
 
 /* 标题样式 */

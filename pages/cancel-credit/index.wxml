@@ -23,7 +23,7 @@
   </view>
 </view>
 
-<view class="app-page-content">
+<view class="container app-page-content">
   <view wx:if="{{ isSelectOtherReason }}" class="reason_other_wrap">
     <wux-textarea
       focus
