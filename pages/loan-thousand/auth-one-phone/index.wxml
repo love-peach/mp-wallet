@@ -1,0 +1,7 @@
+<!--pages/loan-thousand/auth-one-phone/index.wxml-->
+<app-layout>
+  <view >
+    <text>pages/loan-thousand/auth-one-phone/index.wxml</text>
+
+  </view>
+</app-layout>

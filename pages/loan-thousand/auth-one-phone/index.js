@@ -1,26 +1,26 @@
+// pages/loan-thousand/auth-one-phone/index.js
 const app = getApp();
-
 app.wxPage({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isReachBottom: false,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-    
+  onLoad: function (options) {
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
@@ -55,25 +55,13 @@ app.wxPage({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.setData({
-      isReachBottom: true
-    });
-    console.log(11);
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
-  },
 
-  /**
-   * 回首页
-   */
-  handleGoHome() {
-    wx.redirectTo({
-      url: '/pages/select-product/select-product'
-    });
   }
 })

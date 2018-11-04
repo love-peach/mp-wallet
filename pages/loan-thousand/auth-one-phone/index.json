@@ -1,6 +1,4 @@
 {
-  "navigationBarTitleText": "",
-  "backgroundColor": "#4CA6FF",
   "usingComponents": {
     "app-layout": "/components/app-layout/index"
   }

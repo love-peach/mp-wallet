@@ -1,0 +1,3 @@
+<view class="app-footer app-footer-border" bindtap="handleCallCustomerService">
+  <text class="app-footer-text">客服电话：400—088—7626 </text>
+</view>

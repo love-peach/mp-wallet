@@ -1,41 +1,43 @@
 <import src="/template/index.wxml" />
 
-<template is="auth-schedule-million" data="{{width: '15%'}}"/>
-<view class="container app-page-content app-page-has-tel">
-  <template is="title-bar" data="{{ text: '请设置您的借款／还款密码：'}}" />
-  <view class=".app-page-offset-content">
-    <wux-cell hoverClass="none">
-      <input
-        focus
-        password
-        slot="footer"
-        type="number"
-        maxlength="{{6}}"
-        class="form-item-text"
-        placeholder="请输入密码（6位数字）"
-        placeholder-style="form-item-text-placeholder"
-        value="{{pwd}}"
-        data-field="pwd"
-        bindinput="handleChangeInputValue"
-      />
-    </wux-cell>
-    <wux-cell hoverClass="none">
-      <input
-        password
-        slot="footer"
-        type="number"
-        maxlength="{{6}}"
-        class="form-item-text"
-        placeholder="请重复密码（6位数字）"
-        value="{{pwdConfirm}}"
-        data-field="pwdConfirm"
-        bindinput="handleChangeInputValue"
-      />
-    </wux-cell>
+<app-layout headerTitle="借款 / 还款密码">
+  <template is="auth-schedule-million" data="{{width: '15%'}}"/>
+  <view class="container app-page-content app-page-has-tel">
+    <template is="title-bar" data="{{ text: '请设置您的借款／还款密码：'}}" />
+    <view class=".app-page-offset-content">
+      <wux-cell hoverClass="none">
+        <input
+          focus
+          password
+          slot="footer"
+          type="number"
+          maxlength="{{6}}"
+          class="form-item-text"
+          placeholder="请输入密码（6位数字）"
+          placeholder-style="form-item-text-placeholder"
+          value="{{pwd}}"
+          data-field="pwd"
+          bindinput="handleChangeInputValue"
+        />
+      </wux-cell>
+      <wux-cell hoverClass="none">
+        <input
+          password
+          slot="footer"
+          type="number"
+          maxlength="{{6}}"
+          class="form-item-text"
+          placeholder="请重复密码（6位数字）"
+          value="{{pwdConfirm}}"
+          data-field="pwdConfirm"
+          bindinput="handleChangeInputValue"
+        />
+      </wux-cell>
+    </view>
+    <wux-button class="demo" disabled="{{!isFieldValided}}" bindtap="handleSubmit" block type="calm">下一步</wux-button>
+    <view class="app-tip-wrap">
+      <text class="app-tip-text app-tip-prefix app-tip-prefix-danger">您设置的密码，将在您发生借款、还款行为时验证，用以证明 是您本人行为，请确保密码内容安全且不被泄漏。</text>
+    </view>
   </view>
-  <wux-button class="demo" disabled="{{!isFieldValided}}" bindtap="handleSubmit" block type="calm">下一步</wux-button>
-  <view class="app-tip-wrap">
-    <text class="app-tip-text app-tip-prefix app-tip-prefix-danger">您设置的密码，将在您发生借款、还款行为时验证，用以证明 是您本人行为，请确保密码内容安全且不被泄漏。</text>
-  </view>
-</view>
-<template is="customer-service"/>
+</app-layout>
+

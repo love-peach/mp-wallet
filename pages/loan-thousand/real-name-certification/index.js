@@ -31,6 +31,7 @@ app.wxPage({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log('onLoad');
     const days_count = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();
     let demo4_days_style = new Array;
     for (let i = 1; i <= days_count; i++) {
@@ -104,13 +105,14 @@ app.wxPage({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log('onReady');
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    console.log('onShow');
     const conf = {
       multi: true, // 是否开启多选,
       disablePastDay: false, // 是否禁选过去的日期
@@ -152,14 +154,14 @@ app.wxPage({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log('onHide');
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    
   },
 
   /**
@@ -181,6 +183,24 @@ app.wxPage({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 返回事件
+  backEvent() {
+    wx.showModal({
+      title: '确定取消授信',
+      content: '要放弃这个千元免息的机会吗？',
+      // content: '确定取消授信？ \r\n 要放弃这个千元免息的机会吗？',
+      confirmColor: '#4CA6FF',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定');
+          wx.navigateBack();
+        }else{
+          console.log('用户点击取消');
+        }
+      }
+    });
   },
 
   /**

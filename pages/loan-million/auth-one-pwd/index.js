@@ -138,7 +138,7 @@ app.wxPage({
       this.handleShowFormError();
       return;
     }
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/loan-million/auth-two-identityInfo/index'
     });
   },

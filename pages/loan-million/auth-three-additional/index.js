@@ -32,8 +32,8 @@ app.wxPage({
       },
     ],
     taobaoSts: 0,
-    jingdongSts: 1,
-    creditCardSts: 1,
+    jingdongSts: 0,
+    creditCardSts: 0,
     authStatusTip: {
       taobao: [false, '淘宝授权中', '淘宝已完成授权'],
       jingdong: [false, '京东授权中', '京东已完成授权'],
@@ -143,13 +143,14 @@ app.wxPage({
       'build-typ': authTypeCode,
       'smallLoan': 0,
     }
-    wx.navigateTo({
-      url: `/pages/web-view/index?url=http://baidu.com`
-    });
-    return;
+    // wx.navigateTo({
+    //   url: `/pages/web-view/index?url=http://baidu.com`
+    // });
+    // return;
     api.goThirdPartyAuth(params).then(res => {
       if (res.code === '0000') {
-        const webViewUrl = res.data['cred-process-url'];
+        const webViewUrl = res.data['cred-process-url'].replace(/\?/ig, '&');
+        console.log(webViewUrl, 'webViewUrl');
         wx.navigateTo({
           url: `/pages/web-view/index?url=${webViewUrl}`
         });
@@ -178,8 +179,38 @@ app.wxPage({
       });
       return;
     }
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/loan-million/auth-four-checking/index'
+    });
+  },
+  handleSubmit1() {
+    const { isAgreeProtocol } = this.data;
+    if (!isAgreeProtocol) {
+      wx.showToast({
+        title: '请同意协议',
+        icon: 'none',
+        mask: true,
+        duration: 2000
+      });
+      return;
+    }
+    wx.redirectTo({
+      url: '/pages/loan-million/auth-four-success/index'
+    });
+  },
+  handleSubmit2() {
+    const { isAgreeProtocol } = this.data;
+    if (!isAgreeProtocol) {
+      wx.showToast({
+        title: '请同意协议',
+        icon: 'none',
+        mask: true,
+        duration: 2000
+      });
+      return;
+    }
+    wx.redirectTo({
+      url: '/pages/loan-million/auth-four-failed/index'
     });
   }
 })

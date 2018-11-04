@@ -187,6 +187,24 @@ app.wxPage({
 
   },
 
+  // 返回事件
+  backEvent() {
+    wx.showModal({
+      title: '确定取消授信？',
+      content: '要放弃使用50元抵息红包获得 \r\n更高额度的机会吗？',
+      // content: '确定取消授信？ \r\n 要放弃这个千元免息的机会吗？',
+      confirmColor: '#4CA6FF',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定');
+          wx.navigateBack();
+        }else{
+          console.log('用户点击取消');
+        }
+      }
+    });
+  },
+
   /**
    * 用户选择图片
    */
@@ -434,7 +452,7 @@ app.wxPage({
       this.handleShowFormError();
       return;
     }
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/loan-million/auth-three-additional/index'
     });
   },

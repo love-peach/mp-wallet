@@ -1,0 +1,15 @@
+.app-footer{
+  /* position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fff; */
+}
+.app-footer-border {
+  box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.2);
+}
+.app-footer-text {
+  color: #686868;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}

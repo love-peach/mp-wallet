@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "信用审核",
   "usingComponents": {
+    "app-layout": "/components/app-layout/index",
     "wux-button": "/components/button/index",
     "wux-animation-group": "/components/animation-group/index"
   }

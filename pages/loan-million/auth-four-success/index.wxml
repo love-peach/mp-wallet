@@ -1,14 +1,16 @@
 <!--pages/login/login.wxml-->
 <import src="/template/index.wxml" />
 
-<template is="auth-schedule-million" data="{{width: '75%'}}"/>
-<view class="container app-page-content app-page-has-tel">
-  <template is="auth-status" data="{{icon: '/assets/images/icon-success.png', text: '授信成功', type: 'success'}}"/>
-  <view class="app-tip-wrap">
-    <text class="app-tip-text">1.您的授信申请已审核成功！</text>
-    <text class="app-tip-text">2.立即下载APP吧！</text>
+<app-layout headerTitle="信用审核">
+  <template is="auth-schedule-million" data="{{width: '75%'}}"/>
+  <view class="container app-page-content app-page-has-tel">
+    <template is="auth-status" data="{{icon: '/assets/images/icon-success.png', text: '授信成功', type: 'success'}}"/>
+    <view class="app-tip-wrap">
+      <text class="app-tip-text">1.您的授信申请已审核成功！</text>
+      <text class="app-tip-text">2.立即下载APP吧！</text>
+    </view>
+    <wux-button class="additional-btn" bindtap="handleDounload" block type="calm">下载App查看进度</wux-button>
+    <template is="follow-qrcode" />
   </view>
-  <wux-button class="additional-btn" bindtap="handleDounload" block type="calm">下载App查看进度</wux-button>
-  <template is="follow-qrcode" />
-</view>
-<template is="customer-service" />
+</app-layout>
+

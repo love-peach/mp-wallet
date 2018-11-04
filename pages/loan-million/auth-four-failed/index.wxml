@@ -1,11 +1,13 @@
 <!--pages/login/login.wxml-->
 <import src="/template/index.wxml" />
 
-<template is="auth-schedule-million" data="{{width: '75%'}}"/>
-<view class="container app-page-content app-page-has-tel">
-  <template is="auth-status" data="{{icon: '/assets/images/icon-fail.png', text: '授信失败', type: 'negative'}}"/>
-  <text class="auth-failed-tip">系统在不断更新，您可以在2018年12月12日后重新申请</text>
-  <wux-button class="additional-btn" bindtap="handleGoHome" block type="calm">返回首页</wux-button>
-</view>
-  <template is="customer-service" />
+<app-layout headerTitle="信用审核">
+  <template is="auth-schedule-million" data="{{width: '75%'}}"/>
+  <view class="container app-page-content app-page-has-tel">
+    <template is="auth-status" data="{{icon: '/assets/images/icon-fail.png', text: '授信失败', type: 'negative'}}"/>
+    <text class="auth-failed-tip">系统在不断更新，您可以在2018年12月12日后重新申请</text>
+    <wux-button class="additional-btn" bindtap="handleGoHome" block type="calm">返回首页</wux-button>
+  </view>
+</app-layout>
+
 

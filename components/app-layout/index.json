@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "app-header": "/components/app-header/index",
+    "app-footer": "/components/app-footer/index"
+  }
+}

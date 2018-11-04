@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "身份信息",
   "usingComponents": {
+    "app-layout": "/components/app-layout/index",
     "wux-divider": "/components/divider/index",
     "wux-cell": "/components/cell/index",
     "wux-button": "/components/button/index",

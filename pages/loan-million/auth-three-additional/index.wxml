@@ -1,29 +1,33 @@
 <!--pages/login/login.wxml-->
 <import src="/template/index.wxml" />
 
-<template is="auth-schedule-million" data="{{width: '65%'}}"/>
-<view class="container app-page-content app-page-has-tel">
-  <template is="title-bar" data="{{ text: '请选择至少一项，授信项越多，额度越高哦！'}}" />
-  <view class="app-page-offset-content">
-    <block  wx:for="{{additionalList}}" wx:key="{{ index }}">
-      <wux-cell
-        hoverClass="wux-cell--active"
-        is-link
-        thumb="{{item.imgSrc}}"
-        title="{{item.text}}"
-        extra="去授权"
-        data-auth-type="{{item.authType}}"
-        data-auth-type-code="{{item.authTypeCode}}"
-        bindtap="handleAuthTo"
-      />
-    </block>
+<app-layout headerTitle="补充认证信息">
+  <template is="auth-schedule-million" data="{{width: '65%'}}"/>
+  <view class="container app-page-content app-page-has-tel">
+    <template is="title-bar" data="{{ text: '请选择至少一项，授信项越多，额度越高哦！'}}" />
+    <view class="app-page-offset-content">
+      <block  wx:for="{{additionalList}}" wx:key="{{ index }}">
+        <wux-cell
+          hoverClass="wux-cell--active"
+          is-link
+          thumb="{{item.imgSrc}}"
+          title="{{item.text}}"
+          extra="去授权"
+          data-auth-type="{{item.authType}}"
+          data-auth-type-code="{{item.authTypeCode}}"
+          bindtap="handleAuthTo"
+        />
+      </block>
+    </view>
+    <view class="protocol-wrap" bindtap="handleToggleAgreeProtocol">
+      <image class="protocol-icon" src="{{isAgreeProtocol ? '/assets/images/icon-check-active.png' : '/assets/images/icon-check.png'}}" />
+      <text class="protocol-text">我已阅读并同意</text>
+      <text class="protocol-text protocol-terms" catchtap="handleReadProtocol">《随行付用户隐私协议》</text>
+    </view>
+    <wux-button disabled="{{!isAgreeProtocol}}" class="additional-btn" bindtap="handleSubmit" block type="calm">提交审核 pendding</wux-button>
+    <wux-button disabled="{{!isAgreeProtocol}}" class="additional-btn" bindtap="handleSubmit1" block type="calm">提交审核 success</wux-button>
+    <wux-button disabled="{{!isAgreeProtocol}}" class="additional-btn" bindtap="handleSubmit2" block type="calm">提交审核 fail</wux-button>
   </view>
-  <view class="protocol-wrap" bindtap="handleToggleAgreeProtocol">
-    <image class="protocol-icon" src="{{isAgreeProtocol ? '/assets/images/icon-check-active.png' : '/assets/images/icon-check.png'}}" />
-    <text class="protocol-text">我已阅读并同意</text>
-    <text class="protocol-text protocol-terms" catchtap="handleReadProtocol">《随行付用户隐私协议》</text>
-  </view>
-  <wux-button disabled="{{!isAgreeProtocol}}" class="additional-btn" bindtap="handleSubmit" block type="calm">提交审核</wux-button>
-</view>
-<template is="customer-service" />
+</app-layout>
+
 

@@ -1,0 +1,29 @@
+.app-header-status-bar {
+  height: 40rpx;
+}
+.app-header-content {
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.app-header-content-offset-right {
+  padding-right: 98rpx;
+}
+.app-header-goback {
+  height: 88rpx;
+  width: 88rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.app-header-title {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 32rpx;
+}

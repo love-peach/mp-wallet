@@ -37,11 +37,16 @@
 /* 认证进度条 万元版 */
 .auth-schedule-million {
   position: relative;
+  padding-top: 50rpx;
   margin-top: 10rpx;
   margin-bottom: 40rpx;
   margin: 10rpx 50rpx 50rpx;
 }
 .auth-schedule-million .auth-schedule-result {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50rpx;
   text-align: right;
   font-size: 36rpx;
   color: #FF9600;
@@ -55,8 +60,8 @@
 
 .schedule-bar-outer {
   position: absolute;
-  top: 72rpx;
   left: 28rpx;
+  top: 68rpx;
   right: 5rpx;
   height: 20rpx;
   border-radius: 20rpx;
@@ -79,11 +84,12 @@
   align-items: center;
 }
 .schedule-item-million-img {
-  width: 36rpx;
-  height: 36rpx;
+  box-sizing: border-box;
+  width: 56rpx;
+  height: 56rpx;
   padding: 8rpx;
   background-color: #fff;
-  border-radius: 40rpx;
+  border-radius: 56rpx;
   border: 3rpx solid #4CA6FF;
 }
 .schedule-item-million-text {

@@ -1,12 +1,17 @@
 /* 容器样式 */
-.container {
+
+page {
   height: 100%;
+}
+
+.container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   box-sizing: border-box;
   padding-bottom: 80rpx;
 }
+
 
 /* 容器样式 间距 */
 .app-page-content {

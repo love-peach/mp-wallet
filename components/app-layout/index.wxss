@@ -1,0 +1,36 @@
+/* components/app-layout/index.wxss */
+.app-layout {
+  padding-top: 130rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.app-layout-offset-bottom {
+  padding-bottom: 140rpx;
+}
+
+/* header布局 顶部navbar */
+.app-header-wrap {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #4CA6FF;
+  box-sizing: border-box;
+}
+
+.app-layout-content {
+  position: relative;
+}
+
+/* foooter布局 底部客服电话 */
+.app-footer-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #fff;
+  box-sizing: border-box;
+}

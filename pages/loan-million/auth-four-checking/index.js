@@ -132,5 +132,10 @@ app.wxPage({
       current: src, // 当前显示图片的http链接   
       urls: [src],
     });
+  },
+  handleGoHome() {
+    wx.navigateTo({
+      url: '/pages/select-product/select-product'
+    });
   }
 })
