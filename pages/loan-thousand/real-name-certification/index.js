@@ -402,6 +402,8 @@ app.wxPage({
       this.handleShowFormError();
       return;
     }
-    console.log(this.data, 'ss')
+    wx.redirectTo({
+      url: '/pages/loan-thousand/auth-one-phone/index'
+    });
   },
 })

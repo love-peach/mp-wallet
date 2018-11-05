@@ -1,1 +1,4 @@
 /* pages/loan-thousand/auth-one-phone/index.wxss */
+.auth-phone-btn {
+  margin-top: 380rpx;
+}

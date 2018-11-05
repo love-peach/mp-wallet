@@ -1,6 +1,5 @@
 // pages/login/login.js
 // https://www.jb51.net/article/137920.htm
-import api from '../../../api/api.js';
 
 const app = getApp();
 
@@ -147,7 +146,7 @@ app.wxPage({
     //   url: `/pages/web-view/index?url=http://baidu.com`
     // });
     // return;
-    api.goThirdPartyAuth(params).then(res => {
+    this.api.goThirdPartyAuth(params).then(res => {
       if (res.code === '0000') {
         const webViewUrl = res.data['cred-process-url'].replace(/\?/ig, '&');
         console.log(webViewUrl, 'webViewUrl');

@@ -37,6 +37,32 @@
   </view>
 </template>
 
+<!-- 认证进度条 千元版 -->
+<template name="auth-schedule-thousand">
+  <view class="auth-schedule-thousand">
+    <view class="schedule-bar-outer-thousand">
+      <view class="schedule-bar-inner-thousand" style="width: {{ width }}%"></view>
+    </view>
+    <view class="schedule-list-thousand">
+      <view class="schedule-item-thousand">
+        <image wx:if="{{ width > 0 }}" class="schedule-item-thousand-img schedule-item-thousand-img-active" mode="aspectFit" src="/assets/images/auth-schedule-thousand/icon-phone-active.png"></image>
+        <image wx:else class="schedule-item-thousand-img" mode="aspectFit" src="/assets/images/auth-schedule-thousand/icon-phone.png"></image>
+        <text class="schedule-item-thousand-text">手机号认证</text>
+      </view>
+      <view class="schedule-item-thousand">
+        <image wx:if="{{ width > 50 }}" class="schedule-item-thousand-img schedule-item-thousand-img-active" mode="aspectFit" src="/assets/images/auth-schedule-thousand/icon-user-active.png"></image>
+        <image wx:else class="schedule-item-thousand-img" mode="aspectFit" src="/assets/images/auth-schedule-thousand/icon-user.png"></image>
+        <text class="schedule-item-thousand-text">人脸识别</text>
+      </view>
+      <view class="schedule-item-thousand">
+        <image wx:if="{{ width > 80 }}" class="schedule-item-thousand-img schedule-item-thousand-img-active" mode="aspectFit" src="/assets/images/auth-schedule-thousand/icon-wallet-active.png"></image>
+        <image wx:else class="schedule-item-thousand-img" mode="aspectFit" src="/assets/images/auth-schedule-thousand/icon-wallet.png"></image>
+        <text class="schedule-item-thousand-text">获取额度</text>
+      </view>
+    </view>
+  </view>
+</template>
+
 <!-- 认证进度条 万元版 -->
 <template name="auth-schedule-million">
   <view class="auth-schedule-million">

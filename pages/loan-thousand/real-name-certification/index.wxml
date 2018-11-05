@@ -1,11 +1,11 @@
 
+<import src="/template/index.wxml" />
 
 <app-layout
   headerTitle="实名认证"
   isControlBackEvent="{{ true }}"
   bindbackevent="backEvent"
 >
-  <import src="/template/index.wxml" />
   <template is="custom-tip-bar" data="{{text: tipText}}"/>
 
   <view class="container app-page-content app-page-has-tel">

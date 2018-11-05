@@ -16,7 +16,7 @@ App({
     userInfo: null,
     platformOs: 'h5',
     sysType: 'wechat',
-    token: 'a3938d506fda644133b3d743920cb787',
+    token: 'bb80e8cd5838fff551363b54e0954960',
     baseUrl: 'https://stageloanh5-test.vbillbank.com/api',
     version: '1.0.0'
   }

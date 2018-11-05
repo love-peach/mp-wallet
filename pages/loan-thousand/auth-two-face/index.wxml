@@ -1,0 +1,10 @@
+<!--pages/loan-thousand/auth-one-phone/index.wxml-->
+<import src="/template/index.wxml" />
+
+<app-layout headerTitle="人脸识别">
+  <template is="auth-schedule-thousand" data="{{width: 75}}"/>
+  <view class="container app-page-content app-page-has-tel">
+    <template is="title-bar" data="{{ text: '人脸识别'}}" />
+    <wux-button class="auth-phone-btn" bindtap="handleSubmit" block type="calm">下一步</wux-button>
+  </view>
+</app-layout>

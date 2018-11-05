@@ -1,7 +1,22 @@
 <!--pages/loan-thousand/auth-one-phone/index.wxml-->
-<app-layout>
-  <view >
-    <text>pages/loan-thousand/auth-one-phone/index.wxml</text>
+<import src="/template/index.wxml" />
 
+<app-layout headerTitle="手机号认证">
+  <template is="auth-schedule-thousand" data="{{width: 28}}"/>
+  <view class="container app-page-content app-page-has-tel">
+    <template is="title-bar" data="{{ text: '第1步，请授权认证手机号'}}" />
+    <view class="app-page-offset-content">
+      <wux-cell
+        hoverClass="wux-cell--active"
+        is-link
+        thumb="/assets/images/yunxingshang.png"
+        title="手机号认证"
+        extra="去授权"
+        data-auth-type="yunxingshang"
+        data-auth-type-code="4"
+        bindtap="handleAuthTo"
+      />
+    </view>
+    <wux-button class="auth-phone-btn" bindtap="handleSubmit" block type="calm">下一步</wux-button>
   </view>
 </app-layout>

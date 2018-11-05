@@ -34,6 +34,72 @@
   font-size: 26rpx; 
 }
 
+/* 认证进度条 千元版 */
+.auth-schedule-thousand {
+  position: relative;
+  padding-top: 50rpx;
+  margin-top: 10rpx;
+  margin-bottom: 40rpx;
+  margin: 10rpx 30rpx 50rpx;
+}
+.auth-schedule-thousand .auth-schedule-result-thousand {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50rpx;
+  text-align: right;
+  font-size: 36rpx;
+  color: #FF9600;
+  font-weight: bolder;
+}
+.auth-schedule-result-thousand:after {
+  content: '元';
+  font-size: 24rpx;
+  font-weight: normal;
+}
+
+.schedule-bar-outer-thousand {
+  position: absolute;
+  left: 38rpx;
+  top: 73rpx;
+  right: 25rpx;
+  height: 10rpx;
+  border-radius: 20rpx;
+  background-color: #d6d6d6;
+}
+.schedule-bar-inner-thousand {
+  height: 100%;
+  border-radius: 20rpx;
+  background-color: RGBA(76, 166, 255, 1);
+}
+
+.schedule-list-thousand {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.schedule-item-thousand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.schedule-item-thousand-img {
+  box-sizing: border-box;
+  width: 56rpx;
+  height: 56rpx;
+  padding: 8rpx;
+  background-color: #fff;
+  border-radius: 56rpx;
+  border: 3rpx solid #d6d6d6;
+}
+.schedule-item-thousand-img-active {
+  border: 3rpx solid #4CA6FF;
+}
+.schedule-item-thousand-text {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+
 /* 认证进度条 万元版 */
 .auth-schedule-million {
   position: relative;

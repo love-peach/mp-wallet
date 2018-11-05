@@ -6,9 +6,6 @@
     isControlBackEvent="{{ isControlBackEvent }}"
     bindtap="onTap"
   />
-  <!-- <scroll-view scroll-y class="app-layout-content">
-    <slot></slot>
-  </scroll-view> -->
   <view class="app-layout-content">
     <slot></slot>
   </view>
