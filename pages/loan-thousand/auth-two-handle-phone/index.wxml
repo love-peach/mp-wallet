@@ -1,0 +1,27 @@
+<!--pages/loan-thousand/auth-one-phone/index.wxml-->
+<import src="/template/index.wxml" />
+
+<app-layout headerTitle="上传手持照片">
+  <template is="auth-schedule-thousand" data="{{width: 51}}"/>
+  <view class="container app-page-content app-page-has-tel">
+    <image class="auth-face-failed-diagram" mode="aspectFit" src="https://stageloanh5-test.vbillbank.com/img/faceFailed-92bc6836.png"></image>
+    <text decode class="auth-face-failed-text">呜呜，人脸识别还是不成功 &gt;_&lt; </text>
+    <text class="auth-face-failed-text auth-face-failed-text-bold">拍摄手持身份证照片也可以认证哦</text>
+    <wux-divider show-text="{{ false }}"></wux-divider>
+    <template is="title-bar" data="{{ text: '最后1步，拍摄本人手持身份证照'}}" />
+
+    <view class="upload-id-card" style="justify-content:center">
+      <view class="id-card-item id-card-front">
+        <image
+          class="id-card-img"
+          src="{{cardHand || cardHandPlaceholder}}"
+          data-card-side="cardHand"
+          bindtap="handleSelectImage"
+        />
+        <text class="id-card-text" >点击拍摄本人手持身份证照</text>
+      </view>
+    </view>
+
+    <wux-button class="auth-fach-failed-btn" bindtap="handleSubmit" block type="calm">提交</wux-button>
+  </view>
+</app-layout>

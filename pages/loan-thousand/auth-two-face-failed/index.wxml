@@ -1,0 +1,12 @@
+<!--pages/loan-thousand/auth-one-phone/index.wxml-->
+<import src="/template/index.wxml" />
+
+<app-layout headerTitle="人脸识别失败">
+  <template is="auth-schedule-thousand" data="{{width: 51}}"/>
+  <view class="container app-page-content app-page-has-tel">
+    <image class="auth-face-failed-diagram" mode="aspectFit" src="https://stageloanh5-test.vbillbank.com/img/faceFailed-92bc6836.png"></image>
+    <text class="auth-face-failed-encourage-text">不要灰心，请点击下方按钮再试一次</text>
+    <text class="auth-face-failed-tip-text"><text class="auth-face-failed-tip-title">温馨提示</text>：请确保您将脸部置于摄像范围内，保持脸部完整，并按提示大声朗读数字、录制视频。</text>
+    <wux-button class="auth-fach-failed-btn" bindtap="handleSubmit" block type="calm">再次识别</wux-button>
+  </view>
+</app-layout>

@@ -58,7 +58,6 @@ app.wxPage({
     this.setData({
       isReachBottom: true
     });
-    console.log(11);
   },
 
   /**

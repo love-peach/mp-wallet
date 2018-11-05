@@ -43,7 +43,7 @@ app.wxPage({
         cancelReason: res.data,
       });
     }).catch(err => {
-      console.log();
+      console.log(err);
     });
   },
 
@@ -59,8 +59,10 @@ app.wxPage({
     });
   },
 
+  /**
+   * 选择其他原因 输入事件
+   */
   handleChangeOtherReason(event) {
-    console.log(event);
     this.setData({
       otherReason: event.detail.value,
     });

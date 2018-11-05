@@ -23,10 +23,8 @@ Page({
   async onLoad(options) {
     // wx.authorize({scope: "scope.userLocation"});
     const location = await wxApi.getLocation();
-    console.log(location, 'location');
 
     const { address } = await wxApi.getLocationFormat();
-    console.log(address, 'address');
 
     wxApi.login().then(res => {
       console.log(res, 'res')

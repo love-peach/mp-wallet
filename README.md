@@ -126,6 +126,21 @@
 
 ```
 
+## 小程序配置
+
+### request合法域名
+
+- https://stageloanh5.vbillbank.com
+- https://stageloanh5-test.vbillbank.com
+- https://tcb-api.tencentcloudapi.com
+- https://apis.map.qq.com
+  
+### 业务域名
+
+- https://stageloanh5-test.vbillbank.com
+- https://ida.webank.com/
+
+
 ## 注意点
 
 ### 页面布局

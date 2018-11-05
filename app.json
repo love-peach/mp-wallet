@@ -1,10 +1,12 @@
 {
   "pages": [
     "pages/select-product/select-product",
+    "pages/loan-million/auth-three-additional/index",
     "pages/loan-thousand/auth-two-face/index",
+    "pages/loan-thousand/auth-two-handle-phone/index",
+    "pages/loan-thousand/auth-two-face-failed/index",
     "pages/loan-thousand/auth-one-phone/index",
     "pages/loan-million/auth-two-identityInfo/index",
-    "pages/loan-million/auth-three-additional/index",
     "pages/loan-million/auth-four-checking/index",
     "pages/loan-million/auth-four-success/index",
     "pages/loan-thousand/real-name-certification/index",

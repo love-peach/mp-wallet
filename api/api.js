@@ -20,3 +20,8 @@ exports.getCancelCreditReasonList = function (params) {
 exports.goThirdPartyAuth = function (params) {
   return request.get(apiUrl.thirdPartyAuth, params);
 };
+
+// 人脸识别
+exports.goFaceAuth = function (params) {
+  return request.get(apiUrl.authFaceUrl, params);
+};

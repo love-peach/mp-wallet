@@ -392,7 +392,6 @@ app.wxPage({
    * 选择日期
    */
   handleSelectDate(event) {
-    console.log(event, '33')
     this.handleShowCalendar();
   },
 

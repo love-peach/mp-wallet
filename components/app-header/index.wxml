@@ -1,13 +1,14 @@
 <view class="app-header">
   <view class="app-header-status-bar"></view>
   <view class="app-header-content {{ headerArrow ? 'app-header-content-offset-right' : ''}}">
-    <image
-      wx:if="{{ headerArrow }}"
-      class="app-header-goback"
-      mode="aspectFit"
-      src="/assets/images/icon-arrow-left.png"
-      bindtap="onTap"
-    />
+    <view bindtap="onTap" class="app-header-goback-wrap" >
+      <image
+        wx:if="{{ headerArrow }}"
+        class="app-header-goback"
+        mode="aspectFit"
+        src="/assets/images/icon-arrow-left.png"
+      />
+    </view>
     <text class="app-header-title">{{ headerTitle }}</text>
     <slot></slot>
   </view>

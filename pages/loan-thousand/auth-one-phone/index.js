@@ -91,21 +91,15 @@ app.wxPage({
       });
       return;
     }
-    console.log('去授权');
     const params = {
       'build-typ': authTypeCode,
       'smallLoan': 0,
     }
-    // wx.navigateTo({
-    //   url: `/pages/web-view/index?url=http://baidu.com`
-    // });
-    // return;
     this.api.goThirdPartyAuth(params).then(res => {
       if (res.code === '0000') {
         const webViewUrl = res.data['cred-process-url'].replace(/\?/ig, '&');
-        console.log(webViewUrl, 'webViewUrl');
         wx.navigateTo({
-          url: `/pages/web-view/index?url=${webViewUrl}`
+          url: `/pages/web-view/index?webViewUrl=${webViewUrl}`
         });
       } else {
         wx.showToast({
@@ -129,7 +123,6 @@ app.wxPage({
    * 提交授信
    */
   handleSubmit() {
-    console.log('下一步');
     wx.redirectTo({
       url: '/pages/loan-thousand/auth-two-face/index'
     });

@@ -13,17 +13,15 @@ Page({
   onLoad: function (options) {
     let searchArr = [];
     let searchStr = '';
-    console.log(options, 'options');
     for (let key in options) {
-      if (key !== 'url') {
+      if (key !== 'webViewUrl') {
         let tempSearch = `${key}=${options[key]}`;
         searchArr.push(tempSearch);
       }
     }
     searchStr = '?' + searchArr.join('&');
     this.setData({
-      webUrl: options.url + searchStr,
-      // webUrl: 'https://mp.weixin.qq.com/s/oOAOUxD4ZQhmUCWIkR207Q'
+      webUrl: options.webViewUrl + searchStr
     });
   },
 
@@ -38,7 +36,7 @@ Page({
     }
     return {
       title: '随行付钱包',
-      path: `/pages/web-view/index?url=${srcNew}`
+      path: `/pages/web-view/index?webViewUrl=${srcNew}`
     }
   }
 })

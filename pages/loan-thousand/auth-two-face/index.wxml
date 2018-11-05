@@ -2,9 +2,16 @@
 <import src="/template/index.wxml" />
 
 <app-layout headerTitle="人脸识别">
-  <template is="auth-schedule-thousand" data="{{width: 75}}"/>
+  <template is="auth-schedule-thousand" data="{{width: 51}}"/>
   <view class="container app-page-content app-page-has-tel">
-    <template is="title-bar" data="{{ text: '人脸识别'}}" />
-    <wux-button class="auth-phone-btn" bindtap="handleSubmit" block type="calm">下一步</wux-button>
+    <template is="title-bar" data="{{ text: '最后1步，请按下面提示录制视频'}}" />
+    <image class="auth-face-diagram" mode="aspectFit" src="https://stageloanh5-test.vbillbank.com/img/faceCard-14dab18b.png"></image>
+    <wux-divider show-text="{{ false }}"></wux-divider>
+    <text class="auth-face-tip-title">注意事项</text>
+    <view class="app-tip-wrap">
+      <text class="app-tip-text">1. 为了确保您的借款安全，我们需要对您进行人脸识别</text>
+      <text class="app-tip-text">2. 请您本人亲自完成，将脸部置于摄像范围内，保持脸部完整，按提示读数字、录制视频</text>
+    </view>
+    <wux-button class="auth-fach-btn" bindtap="handleSubmit" block type="calm">开始识别</wux-button>
   </view>
 </app-layout>

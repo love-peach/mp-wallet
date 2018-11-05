@@ -16,7 +16,6 @@ const formatNumber = n => {
 
 /* 获取链接参数 对象返回 */
 export const getUrlParam = url => {
-  console.log(url);
   let theRequest = {};
   if (url && url.indexOf('?') != -1) {
     let strTwo = url.split('?');

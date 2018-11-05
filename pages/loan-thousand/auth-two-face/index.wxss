@@ -1,1 +1,13 @@
-/* pages/loan-thousand/auth-two-face/index.wxss */
+.auth-face-diagram {
+  width: 290rpx;
+  height: 240rpx;
+  margin: 40rpx auto;
+}
+.auth-face-tip-title {
+  margin-top: 30rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+.auth-fach-btn {
+  margin-top: 100rpx;
+}

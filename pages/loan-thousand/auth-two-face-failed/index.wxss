@@ -1,0 +1,25 @@
+.auth-face-failed-diagram {
+  width: 204rpx;
+  height: 188rpx;
+  margin: 30rpx auto;
+}
+.auth-face-failed-encourage-text {
+  color: #4CA6FF;
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.auth-face-failed-tip-text {
+  margin-top: 60rpx;
+  font-size: 24rpx;
+  color: #9A9A9A;
+  line-height: 40rpx;
+}
+.auth-face-failed-tip-title {
+  color: #4CA6FF;
+}
+
+.auth-fach-failed-btn {
+  margin-top: 100rpx;
+}
